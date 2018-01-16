@@ -3,13 +3,14 @@ if __name__ == "__main__":
 
     name = raw_input("Hello, What's your name?: ")
     
-    cadena = name
+    cadena = raw_input(name +" , tell me about you: ")
     while cadena != "#":
-        cadena = raw_input(name +" , tell me about you: ")
         if(positive(cadena, 0.1)):
            print ("Wow that's fantastic!")
         else:
             print("That's bad")
+            
+        cadena = raw_input(name +" , tell me about you: ")
 
     print("Program finished")
         
