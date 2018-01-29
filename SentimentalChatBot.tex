@@ -207,9 +207,9 @@ A chatbot is a conversational bot whose objetive is to interract with the user, 
 	\label{sec:eliza}
 The need to create virtual machines that speak as if they were human beings born in the decade of the 60s. ELIZA was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", ELIZA can respond "Tell me more about your family" \cite{shawar2007chatbots}.\\
 
-Eliza is basically composed of a dictionary of pronouns, a list of matches and 3 functions.\cite{small2017} The dictionary of pronouns is basically responsible for entering the correct pronouns in the answers given by the machine, that is, if the user enters "my father" as input, the machine returns a response in which it says "your father. The list of matches is responsible for linking keywords that the user enters with possible answers related to that keyword. For example, if the user enters the word "child", the machine will probably respond: "Did you have close friends as a child?" or "Did the other children sometimes tease you?"."\cite{small2017}\\
+Eliza is basically composed of a dictionary of pronouns, a list of matches and 3 functions.\cite{joseph1966eliza} The dictionary of pronouns is basically responsible for entering the correct pronouns in the answers given by the machine, that is, if the user enters "my father" as input, the machine returns a response in which it says "your father. The list of matches is responsible for linking keywords that the user enters with possible answers related to that keyword. For example, if the user enters the word "child", the machine will probably respond: "Did you have close friends as a child?" or "Did the other children sometimes tease you?"."\cite{joseph1966eliza}\\
 
-Now we are going to see how the functions work. We will do it with the help of some images with the program code implemented in Python.\\
+Now we are going to see how the functions work. We have implemented in Python, with the help of \cite{small2017}, the ELIZA chatbot, in order to understand more easily how the first chatbot of all times worked. Let's do the analisys with the help of some images with the program code.\\
 
 \begin{figure}[h]
 \centering
@@ -217,11 +217,11 @@ Now we are going to see how the functions work. We will do it with the help of s
 \caption{Reflect} 
 \end{figure}
 
-As you can see, the first function that appears to us is called reflect. We iterate through the list of tokens and, if the token exists in our dictionary, we replace it with the value from the dictionary.
+The first function that appears to us is called reflect. We iterate through the list of tokens and, if the token exists in our dictionary, we replace it with the value from the dictionary.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{./Pictures/example.png}
+\includegraphics[scale=0.6]{./Pictures/analyze.png}
 \caption{Analyze}
 \label{fig:analyze}
 \end{figure}
@@ -241,7 +241,7 @@ Here is an example of a the output of the program:
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{./Pictures/main.png}
+\includegraphics[scale=0.6]{./Pictures/example.png}
 \caption{Example}
 \end{figure}
 
