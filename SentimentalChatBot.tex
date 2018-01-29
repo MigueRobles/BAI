@@ -4,8 +4,8 @@
 \newcommand{\trauthor}{Miguel Angel Robles Urquiza | Rafael Ruz Gomez}
 \newcommand{\trtype}{Seminar Paper} %{Seminararbeit} %{Proseminararbeit}
 \newcommand{\trcourse}{Bio - Inspired Artificial Intelligence}
-\newcommand{\trtitle}{Sentimental Chat Box}
-\newcommand{\trmatrikelnummer}{7023522 | }
+\newcommand{\trtitle}{chatbots}
+\newcommand{\trmatrikelnummer}{7023522 | 7019703}
 \newcommand{\tremail}{migueurquiza@gmail.com | rafaroco96@gmail.com}
 \newcommand{\trarbeitsbereich}{Knowledge Technology, WTM}
 \newcommand{\trdate}{22-12-2017}
@@ -169,11 +169,14 @@
 
 % Abstract gives a brief summary of the main points of a paper:
 \section*{Abstract}
-In this paper we will develop a chatbot that knows how to detect the sentimental polarity of a message (if it is positive or negative) and respond appropriately. But before we start ... What is a chatbot? A chatbot is a program that simulates having a conversation with a person by providing automatic responses to entries made by the user. To establish a conversation, phrases that are easily understandable and coherent must be used.
 
-Our way of working will be: We receive the message from the user, we analyze it taking into account individual words (verbs, adjectives, adverbs ...) and once established whether it is a positive or negative message, we will look for the best way to respond
+In this paper we are going to do a research on the automatic learning of the chatbots, focus in sentimental chatbots. First, we will study what is a chatbot, studying its origins and seeing its applications. Once this is done, we will see what are the different types of chatbots that exist today, seeing why we need them, how they work and their advantages and disadvantages.
+
+Once we have introduced the different types of chatbots that exist, we will establish similarities and differences in terms of structure, functionality and use between that chatbots. We will also make an research of the chatbots that because of their low usage and complex and not maintenance have become obsolete, an research of the chatbots that are used to a greater extent nowadays and an research of the chatbots that do not exist yet but we will need in our lives in a future.
+
+
 \begin{comment}
- An “Abstract” serves as a complete summary and teaser of the paper: What is it all about? What is the open problem? What are possible solutions? What is the (abstract) result of this paper? — Usually you (re-)write the Abstract as the last step of your paper writing. 
+
 \end{comment}
 
 % Lists:
@@ -192,18 +195,51 @@ Our way of working will be: We receive the message from the user, we analyze it 
 
 \section{Introduction}
 \label{sec:introduction}
+Let's start by defining what chatbots are. \textit{"Chatbots are computer programs that interact with users using natural languages"}
+\cite{shawar2007chatbots}. The need to create virtual machines that speak as if they were human beings arose in the decade of the 60s. ELIZA was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", ELIZA can respond "Tell me more about your family" \cite{shawar2007chatbots}.
 
 
-The development of artificial intelligence is increasingly present in our lives, so we want to contribute to its continued growth. Many times we need someone to tell us something to make us feel better, someone to be with in bad times or someone to share happiness with. But if we do not have anyone to talk to and we do not want to be "alone" or "sad", what can we do? In this document, we propose a solution. We develop a sentimental chatbot whose objective is to detect the polarity of the feeling of a message. By using this chatbot, you can engage in a conversation that detects whether you are happy or sad, according to your messages and responds appropriately to your messages.
 
-\section{A Brief Review of ChatBot-Tools}
+\section{A Brief Review of ChatBots}
 \label{sec:basics}
 
 In this doccument we're going to work with Python 2.7.13 as programming language, using the libraries \textbf{Pattern} and \textbf{Natural Language Toolkit}. 
 
-Pattern gives us the necessary tools to execute the sentimental analysis of the messages that the ChatBot receives. NLTK(Natural Language Toolkit) is going to help us to work with human language data. 
+Pattern gives us the necessary tools to execute the sentimental analisys of the messages that the chatbot receives. NLTK(Natural Language Toolkit) is going to help us to work with human language data. 
+
+\section{Types of chatbots}
+\label{sec:types}
+
+	\subsection{Sentimental-chatbots}
+	\label{sec:sentimental}
+	
+	Many times we need someone to tell us something to make us feel better, someone to be with in bad times or someone to share happiness with. But if we do not have anyone to talk to and we do not want to be "alone" or "sad", what can we do? In this document, we propose a solution. We develop a sentimental chatbot whose objective is to detect the polarity of the feeling of a message. By using this chatbot, you can engage in a conversation that detects whether you are happy or sad, according to your messages and responds appropriately to your messages.
+
+	\subsection{Information-chatbots}
+	\label{sec:information}
+
+	\subsection{Game-chatbots}
+	\label{sec:game}
+
+	\subsection{Assistant-chatbots}
+	\label{sec:assistant}
+	
+
+\section{Comparison of chatbots}
+\label{sec:comparison}
 
 
+\section{Chatbots in time}
+\label{sec:time}
+
+\subsection{Obsolets}
+\label{sec:obsolet}
+
+\subsection{Nowdays}
+\label{sec:nowdays}
+
+\subsection{Future}
+\label{sec:future}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hier werden - zum Ende des Textes - die bibliographischen Referenzen
@@ -212,8 +248,9 @@ Pattern gives us the necessary tools to execute the sentimental analysis of the 
 % Insbesondere stehen die eigentlichen Informationen in der Datei
 % ``bib.bib''
 %
+\nocite{*}
 \newpage
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \addcontentsline{toc}{section}{Bibliography}% Add to the TOC
 \bibliography{bib}
 
