@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside]{article}
+	\documentclass[12pt,twoside]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Meta informations:
 \newcommand{\trauthor}{Miguel Angel Robles Urquiza | Rafael Ruz Gomez}
@@ -196,14 +196,59 @@ Once we have introduced the different types of chatbots that exist, we will esta
 \section{Introduction}
 \label{sec:introduction}
 Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots}
-A chatbot is a conversational bot whose objetive is to interract with the user, asking question or giving answers or even initiating new topics of conversation. \cite{huang2007extracting}
+A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting}
 
 
 
-\section{A Brief Review of ChatBots}
+\section{A review of chatbots}
 \label{sec:basics}
 
-The need to create virtual machines that speak as if they were human beings arose in the decade of the 60s. ELIZA was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", ELIZA can respond "Tell me more about your family" \cite{shawar2007chatbots}.
+\subsection{First chatbot: ELIZA}
+	\label{sec:eliza}
+The need to create virtual machines that speak as if they were human beings born in the decade of the 60s. ELIZA was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", ELIZA can respond "Tell me more about your family" \cite{shawar2007chatbots}.\\
+
+Eliza is basically composed of a dictionary of pronouns, a list of matches and 3 functions.\cite{small2017} The dictionary of pronouns is basically responsible for entering the correct pronouns in the answers given by the machine, that is, if the user enters "my father" as input, the machine returns a response in which it says "your father. The list of matches is responsible for linking keywords that the user enters with possible answers related to that keyword. For example, if the user enters the word "child", the machine will probably respond: "Did you have close friends as a child?" or "Did the other children sometimes tease you?"."\cite{small2017}\\
+
+Now we are going to see how the functions work. We will do it with the help of some images with the program code implemented in Python.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{./Pictures/reflect.png}
+\caption{Reflect} 
+\end{figure}
+
+As you can see, the first function that appears to us is called reflect. We iterate through the list of tokens and, if the token exists in our dictionary, we replace it with the value from the dictionary.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{./Pictures/example.png}
+\caption{Analyze}
+\label{fig:analyze}
+\end{figure}
+
+The second function that appears is called analyze. We look for if any word in the dictionary match with any word in the user's statement, from which we have stripped the final punctuation. If we find a match, we choose a response template randomly from the list of possible responses associated with the matching pattern. If not, we ask for more information.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{./Pictures/main.png}
+\caption{Main}
+\label{fig:main}
+\end{figure}
+Finally, we have the main function that runs the program. First, we show the initial sentence on the screen, to begin the conversation with the user. From there and until the user does not want to stop, we continue having a conversation with him and analyzing his answers with the function presented in figure \ref{fig:analyze}.\\
+
+Here is an example of a the output of the program:
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{./Pictures/main.png}
+\caption{Example}
+\end{figure}
+
+We see that the program designed by Mr. Joseph Weizenbaum was nothing more than a very simple program with a program that responded according to previously created templates. With the creation of this program we could already see the first brushstrokes of artficial intelligence in a chatbots.
+ 
+
+
 
 \section{Types of chatbots}
 \label{sec:types}
@@ -212,8 +257,8 @@ The need to create virtual machines that speak as if they were human beings aros
 	\label{sec:sentimental}
 	
 	Many times we need someone to tell us something to make us feel better, someone to be with in bad times or someone to share happiness with. But if we do not have anyone to talk to and we do not want to be "alone" or "sad", what can we do? In this document, we propose a solution. We develop a sentimental chatbot whose objective is to detect the polarity of the feeling of a message. By using this chatbot, you can engage in a conversation that detects whether you are happy or sad, according to your messages and responds appropriately to your messages.
-
-	aslkdjasdh
+	
+	
 
 	\subsection{Information-chatbots}
 	\label{sec:information}
@@ -249,6 +294,8 @@ The need to create virtual machines that speak as if they were human beings aros
 % ``bib.bib''
 %
 \nocite{*}
+
+
 \newpage
 \bibliographystyle{alpha}
 \addcontentsline{toc}{section}{Bibliography}% Add to the TOC
