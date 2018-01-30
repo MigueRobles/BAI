@@ -218,11 +218,11 @@ Eliza is basically composed of a dictionary of pronouns, a list of matches and 3
 
 Now we are going to see how the functions work. We have implemented in Python, with the help of \cite{small2017}, the ELIZA chatbot, in order to understand more easily how the first chatbot of all times worked. Let's do the analisys with the help of some images with the program code.\\
 
-\subsubsection*{Functions}
+\subsubsection{Functions}
 	\label{sec:functions}
+\begin{itemize}
 	
-\subsubsection{Reflect}
-	\label{sec:reflect}
+\item{Reflect}
 		
 \begin{figure}[h]
 \centering
@@ -232,9 +232,9 @@ Now we are going to see how the functions work. We have implemented in Python, w
 
 The first function that appears to us is called reflect. We iterate through the list of tokens and, if the token exists in our dictionary, we replace it with the value from the dictionary.
 
-\subsubsection{Analyze}
-	\label{sec:analyze}
-		
+\item{Analyze}
+
+
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{./Pictures/analyze.png}
@@ -244,8 +244,8 @@ The first function that appears to us is called reflect. We iterate through the 
 
 The second function that appears is called analyze. We look for if any word in the dictionary match with any word in the user's statement, from which we have stripped the final punctuation. If we find a match, we choose a response template randomly from the list of possible responses associated with the matching pattern. If not, we ask for more information.
 
-\subsubsection{Main}
-	\label{sec:main}
+\item{Main}
+
 	
 \begin{figure}[h]
 \centering
@@ -257,8 +257,7 @@ The second function that appears is called analyze. We look for if any word in t
 Finally, we have the main function that runs the program. First, we show the initial sentence on the screen, to begin the conversation with the user. From there and until the user does not want to stop, we continue having a conversation with him and analyzing his answers with the function presented in figure \ref{fig:analyze}.\\
 
 
-\subsubsection{Example}
-	\label{sec:example}
+\item{Example}
 	
 Here is an example of a the output of the program. We can see exactly what we are referring to in section X. We have given ELIZA an entry with the word "child", and it has given us using pattern matching, a response that fits into the conversation. Then we have given ELIZA a phrase with words that it does not have in its database and what it has done has been to return a random phrase from the list to continue obtaining information.
 
@@ -270,22 +269,29 @@ Here is an example of a the output of the program. We can see exactly what we ar
 
 We see that the program designed by Mr. Joseph Weizenbaum was a very simple program that response according to previously created templates. With the creation of this program we could already see the first brushstrokes of artficial intelligence in a chatbots.
  
-
+\end{itemize}
+		
 \subsection{ALICE}
 	\label{sec:alice}
 	
 	If we are talking about chatbots, we can not forget to talk about ALICE. As \cite{shawar2002comparison} says, ALICE (Artificial Linguistic Internet Computer Entity) is a robot that you can make chatting with it. ALICE knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). Let's see ALICE deeply:
-	
-	\cite{wallace2003elements}
-	
-\subsubsection{AIML Files}
-	\label{sec:aiml}
 
-\subsubsection{Types of Categories}
-	\label{sec:categories}
+
+\subsubsection{AIML}
+	\begin{itemize}
+	
+	\item Categories\\
+	
+	As we can see in \cite{wallace2003elements}, the categories in AIML are the fundamental units of knowledge. A category is at least two more elements, but it can has optional elements. Basic elements are the patterns and templates, which are usually coded in that order (first pattern and second template) because patter would be the question and template would be the answer. The optional context portion of the constant category of variants, called \textless that\textgreater and \textless topic\textgreater. The \textless that\textgreater tag appears within the category, and its pattern must match the last statement of the robot. Remembering a last statement is important if the robot asks a question. The \textless topic\textgreater tag appears outside the category and brings together a group of categories. 
+	
+	\end{itemize}
 	
 \subsubsection{Preparation for Pattern Matching}
 	\label{sec:preparation}	
+	
+	Before starting pattern matching procedures each input to the AIML interpreter must pass through two processes:
+1- Normalization Process.
+2- Producing input path from each sentence.
 
 \subsubsection{Pattern Matching Behaviour}
 	\label{sec:match}
@@ -357,7 +363,7 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
 		
 		In another example, Cicero Nogueira dos Santos and Maira Gatti propose a \textbf{deep convolutional neural network for sentiment analysis of short texts} \cite{glorot2011domain}.\\
 		
-		In this case the neural network takes a sentence as an input and returns a score for each sentiment label in a set. 
+		In this case the neural network takes a sentence as an input and returns a score for each sentiment label in a set. \\
 		
 		In order to do that, every word is converted into a vector, which is composed of two sub-vectors:
 		
@@ -366,11 +372,11 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
 			\item Character-level: It captures morphological and shape information.
 		\end{itemize}
 	
-		Once we have the sentence converted into word-level and character-level embeddings, the next step they do in CharSCNN consists in extracting a sentence-level representation, but there are two main problems: sentences have different sizes and important information can appear at any position in the sentence. 
+		Once we have the sentence converted into word-level and character-level embeddings, the next step they do in CharSCNN consists in extracting a sentence-level representation, but there are two main problems: sentences have different sizes and important information can appear at any position in the sentence. \\
 		
-		To solve this problem they use a second convolutional layer: \textit{"This layer produces local features around each word in the sentence and then combines them using a max operation to create a fixed-sized feature vector for the sentence."\cite{glorot2011domain}}.
+		To solve this problem they use a second convolutional layer: \textit{"This layer produces local features around each word in the sentence and then combines them using a max operation to create a fixed-sized feature vector for the sentence."\cite{glorot2011domain}}.\\
 		
-		Finally, to finish their neural network architecture, this feature vector of the sentence is processed by two neural network layers, which extract one more level of representation and compute a score for each sentiment label. This is the output, as said before.
+		Finally, to finish their neural network architecture, this feature vector of the sentence is processed by two neural network layers, which extract one more level of representation and compute a score for each sentiment label. This is the output, as said before.\\
 		
 		
 		
