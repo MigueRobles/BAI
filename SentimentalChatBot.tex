@@ -197,14 +197,12 @@ Once we have introduced the different types of chatbots that exist, we will esta
 \label{sec:introduction}
 
 Tec Chnology is (also knowns schanging the way we communicate. Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots}
-A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting}
+A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting}\\
+
+A chatbot is programmed with its own information and recive together the necessary information, reformatting and presenting it in a way that meets the needs of the user. How do they respond accurately? Most chatbots solve this problem by using Case Based Reasoning(CBR). The CBR is able to use the previously experienced specific knowledge, that is, specific problematic situations (cases). Therefore, look for a similar previous case and its reused in the new problematic situation, adapting it to the appropriate conditions and getting to its solution. \cite{kolodner2014case}. There are also other ways to make a chatbot works, for example, using patterns. The program is programmed with response patterns that associate what the user enters with answers stored in a database. X being a variable, the program would identify it as a key phrase "I have X". One pattern could be to have the program respond to the user "I also have X". \\
 
 
-
-A chatbot is programmed with its own information and recive together the necessary information, reformatting and presenting it in a way that meets the needs of the user. How do they respond accurately? Most chatbots solve this problem by using Case Based Reasoning(CBR). The CBR is able to use the previously experienced specific knowledge, that is, specific problematic situations (cases). Therefore, look for a similar previous case and its reused in the new problematic situation, adapting it to the appropriate conditions and getting to its solution. \cite{kolodner2014case}. There are also other ways to make a chatbot works, for example, using patterns. The program is programmed with response patterns that associate what the user enters with answers stored in a database. X being a variable, the program would identify it as a key phrase "I have X". One pattern could be to have the program respond to the user "What a coincidence! My father also has X". 
-
-
- Usually, the artificial intelligence in a chatbots is built using concepts from Natural Language Interaction (NLI). NLI is the technology that allows computers and humans to communicate using natural language (the way we speak to other humans) instead of using a set of programming codes.The advantage of NLI processing is the additional ability to use the phrasing (verbs, nouns, adjectives, etc.) from the input to supply an answer that is more sensitive to the intent of the question. 
+ Usually, the artificial intelligence in a chatbots is built using concepts from Natural Language Interaction (NLI). NLI is the technology that allows computers and humans to communicate using natural language (the way we speak to other humans) instead of using a set of programming codes. The advantage of NLI processing is the additional ability to use the phrasing (verbs, nouns, adjectives, etc.) from the input to supply an answer that is more sensitive to the intent of the question. 
  
 
 
@@ -219,6 +217,12 @@ Eliza is basically composed of a dictionary of pronouns, a list of matches and 3
 
 Now we are going to see how the functions work. We have implemented in Python, with the help of \cite{small2017}, the ELIZA chatbot, in order to understand more easily how the first chatbot of all times worked. Let's do the analisys with the help of some images with the program code.\\
 
+\subsubsection*{Functions}
+	\label{sec:functions}
+	
+\subsubsection{Reflect}
+	\label{sec:reflect}
+		
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{./Pictures/reflect.png}
@@ -227,6 +231,9 @@ Now we are going to see how the functions work. We have implemented in Python, w
 
 The first function that appears to us is called reflect. We iterate through the list of tokens and, if the token exists in our dictionary, we replace it with the value from the dictionary.
 
+\subsubsection{Analyze}
+	\label{sec:analyze}
+		
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{./Pictures/analyze.png}
@@ -235,6 +242,10 @@ The first function that appears to us is called reflect. We iterate through the 
 \end{figure}
 
 The second function that appears is called analyze. We look for if any word in the dictionary match with any word in the user's statement, from which we have stripped the final punctuation. If we find a match, we choose a response template randomly from the list of possible responses associated with the matching pattern. If not, we ask for more information.
+
+\subsubsection{Main}
+	\label{sec:main}
+	
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{./Pictures/main.png}
@@ -244,9 +255,11 @@ The second function that appears is called analyze. We look for if any word in t
 \end{figure}
 Finally, we have the main function that runs the program. First, we show the initial sentence on the screen, to begin the conversation with the user. From there and until the user does not want to stop, we continue having a conversation with him and analyzing his answers with the function presented in figure \ref{fig:analyze}.\\
 
-Here is an example of a the output of the program:
 
-
+\subsubsection{Example}
+	\label{sec:example}
+	
+Here is an example of a the output of the program. We can see exactly what we are referring to in section X. We have given ELIZA an entry with the word "child", and it has given us using pattern matching, a response that fits into the conversation. Then we have given ELIZA a phrase with words that it does not have in its database and what it has done has been to return a random phrase from the list to continue obtaining information.
 
 \begin{figure}[h]
 \centering
@@ -254,16 +267,34 @@ Here is an example of a the output of the program:
 \caption{Example}
 \end{figure}
 
-We see that the program designed by Mr. Joseph Weizenbaum was nothing more than a very simple program with a program that responded according to previously created templates. With the creation of this program we could already see the first brushstrokes of artficial intelligence in a chatbots.
+We see that the program designed by Mr. Joseph Weizenbaum was a very simple program that response according to previously created templates. With the creation of this program we could already see the first brushstrokes of artficial intelligence in a chatbots.
  
 
 \subsection{ALICE}
 	\label{sec:alice}
 	
-	If we are talking about chatbots, we can not forget ALICE. As \cite{shawar2002comparison} says, ALICE( Artificial Linguistic Internet Computer Entity) is a robot that you can make chatting with it. ALICE knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). The next sections describe necessary information about AIML elements, its categories, how they are used in ALICE and Pattern Matching Algorithm.
+	If we are talking about chatbots, we can not forget to talk about ALICE. As \cite{shawar2002comparison} says, ALICE (Artificial Linguistic Internet Computer Entity) is a robot that you can make chatting with it. ALICE knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). Let's see ALICE deeply:
+	
+\subsubsection{AIML Files}
+	\label{sec:aiml}
+
+\subsubsection{Types of Categories}
+	\label{sec:categories}
+	
+\subsubsection{Preparation for Pattern Matching}
+	\label{sec:preparation}	
+
+\subsubsection{Pattern Matching Behaviour}
+	\label{sec:match}
+
+
+
 
 \section{Types of chatbots}
-\label{sec:types}
+	\label{sec:types}
+	
+
+
 
 	\subsection{Sentimental-chatbots}
 	\label{sec:sentimental}
