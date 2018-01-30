@@ -294,7 +294,9 @@ We see that the program designed by Mr. Joseph Weizenbaum was nothing more than 
 				 	valuation the same measurement system is used (Amazon uses a 5 stars system, Yahoo answers uses a like-dislike system, etc) and we must normalize these values.
 		\end{itemize}
 	
-		There are many tools that allow us or help us to analyze sentiment easily, such as "Tweet sentiment application" \footnote{https://www.csc2.ncsu.edu/faculty/healey/tweet\_viz/tweet\_app/} developed by Dr. Christopher Healey that allows you to search for tweets based on keywords and shows us information about tweets containing those keywords that can be very useful such as Sentiment, Topics, Heatmap, Tag Cloud, Timeline, Map, Affinity, Narrative and tweets. \\
+		There are many tools that allow us or help us to analyze sentiment easily. Most of them are convolutional neural networks trained with huge datasets.
+		
+		We can use tools as a help for our algorithms in sentiment analysis such as "Tweet sentiment application" \footnote{https://www.csc2.ncsu.edu/faculty/healey/tweet\_viz/tweet\_app/} developed by Dr. Christopher Healey that allows you to search for tweets based on keywords and shows us information about tweets containing those keywords that can be very useful such as Sentiment, Topics, Heatmap, Tag Cloud, Timeline, Map, Affinity, Narrative and tweets. \\
 		
 		The most useful for us is the Sentiment information that show us a graphic representation of the sentiments shown in the tweets: \textit{"Sentiment. Each tweet is shown as a circle positioned by sentiment, an estimate of the emotion contained in the tweet's text. Unpleasant tweets are drawn as blue circles on the left, and pleasant tweets as green circles on the right. Sedate tweets are drawn as darker circles on the bottom, and active tweets as brighter circles on the top. Hover your mouse over a tweet or click on it to see its text"} \cite{tweet_sentiment_analysis}.
 			
@@ -303,6 +305,48 @@ We see that the program designed by Mr. Joseph Weizenbaum was nothing more than 
 			\includegraphics[scale=0.35]{./Pictures/fireworks_sentiment_visualization.png}
 			\caption{As we can see, most of the tweets associated to the keyword "fireworks" are positive. This can be usefull when parsing some texts containing some words we don't know how to proccess.} 
 		\end{figure}
+	
+		There are more general tools that we can use directly in our sentiment analysis like "pattern.en".
+		
+		\textit{"The pattern.en module contains a fast part-of-speech tagger for English (identifies nouns, adjectives, verbs, etc. in a sentence), sentiment analysis, tools for English verb conjugation and noun singularization \& pluralization, and a WordNet interface."} \cite{python_module}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.8]{./Pictures/python_module.png}
+			\caption{Ilustration of the patter.en python module working.} 
+		\end{figure}
+	
+		Let's take a deeper look into the sentiment section of this module. This module has two functions for sentyment analysis \cite{python_module_sentiment}:
+		
+		\begin{itemize}
+			\item sentiment(sentence): It's the main function for sentiment analysis in this module . As we can read in the webpage \cite{python_module_sentiment}, it gives us two values:
+			
+			\begin{itemize}
+				\item polarity: It takes values from -1.0 to 1.0. It tell us if the sentence is positive or negative. The algorithm is based on the adjectives of the sentence.
+				\item subjectivity: It takes values from 0.0 to 1.0.
+			\end{itemize}
+			
+			\item positive(s, threshold=0.1): It returns True if the given sentence's polarity is above the threshold. We can use this function to detect stronger ir lighter sentiments giving different values to the threshold. \textit{"Accuracy is about 75\% for movie reviews" }\cite{python_module_sentiment} so we can see that there are good tools free-to-use in our sentiment analysis. 
+		\end{itemize}
+		
+		In another example, Cicero Nogueira dos Santos and Maira Gatti propose a deep convolutional neural network for sentiment analysis of short texts \cite{glorot2011domain}.\\
+		
+		In this case the neural network takes a sentence as an input and returns a score for each sentiment label in a set. 
+		
+		In order to do that, every word is converted into a vector, which is composed of two sub-vectors:
+		
+		\begin{itemize}
+			\item Word-level: It captures syntactic and semantic information,
+			\item Wharacter-level: It captures morphological and shape information.
+
+		\end{itemize}
+		
+	 
+		
+		
+		
+	
+		
 	
 
 	\subsection{Information-chatbots}
