@@ -195,10 +195,13 @@ Once we have introduced the different types of chatbots that exist, we will esta
 
 \section{Introduction}
 \label{sec:introduction}
-Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots}
-A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting}
 
+Technology is changing the way we communicate. Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots} Chatbots (also known as conversational agents, artificial conversation entities, or
+chatterboxes) are computer applications that imitate human personality. A chatbot is interactive, asking questions, responding in sentences that track the conversation in a way that is meaningful to humans or even initiating new topics of conversation. \cite{huang2007extracting}
 
+A chatbot is programmed with its own information and recive together the necessary information, reformatting and presenting it in a way that meets the needs of the user. How do they respond accurately? Most chatbots solve this problem by using Case Based Reasoning(CBR). The CBR is able to use the previously experienced specific knowledge, that is, specific problematic situations (cases). Therefore, look for a similar previous case and its reused in the new problematic situation, adapting it to the appropriate conditions and getting to its solution. \cite{kolodner2014case}. There are also other ways to make a chatbot works, for example, using patterns. The program is programmed with response patterns that associate what the user enters with answers stored in a database. X being a variable, the program would identify it as a key phrase "I have X". One pattern could be to have the program respond to the user "What a coincidence! My father also has X". 
+ 
+ 
 
 \section{A review of chatbots}
 \label{sec:basics}
@@ -233,6 +236,7 @@ The second function that appears is called analyze. We look for if any word in t
 \caption{Main}
 \label{fig:main}
 \end{figure}
+
 Finally, we have the main function that runs the program. First, we show the initial sentence on the screen, to begin the conversation with the user. From there and until the user does not want to stop, we continue having a conversation with him and analyzing his answers with the function presented in figure \ref{fig:analyze}.\\
 
 Here is an example of a the output of the program:
