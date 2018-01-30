@@ -263,9 +263,16 @@ We see that the program designed by Mr. Joseph Weizenbaum was nothing more than 
 	\subsubsection{Sentiment analysis}
 	\label{sec::sentiment_analysis}
 	
-	 
-	Many times we need someone to tell us something to make us feel better, someone to be with in bad times or someone to share happiness with. But if we do not have anyone to talk to and we do not want to be "alone" or "sad", what can we do? In this document, we propose a solution. We develop a sentimental chatbot whose objective is to detect the polarity of the feeling of a message. By using this chatbot, you can engage in a conversation that detects whether you are happy or sad, according to your messages and responds appropriately to your messages.
+	As B. Pang and L. Lee say, there are several problems in the sentiment analysis \cite{sentiment_analysis_bpang_llee}:
 	
+	\begin{itemize}
+		\item First of all, we have to determine which documents or webpages have relevant information for sentiment analysis, that's opinions, reviews, etc.
+		\item Then it comes the problem of which portions of the documents or the information we are analyzing are useful for the sentiment analysis.
+		\item After this we have to determine whether the opinion or information expresses a positive or negative feeling, or directly with what feeling it corresponds. In some pages like 
+				Amazon it can be easier since in the comments section, each comment is associated with a product evaluation that usually reflects the user's agreement and therefore the degree of positivity of the comment, but in other occasions in which we have no clue can be complicated.
+		\item Finally we must internally represent in our chatbot or sentiment analysis program that feeling, since not in all the web pages or documents in which we are given a previous
+			 	valuation the same measurement system is used (Amazon uses a 5 stars system, Yahoo answers uses a like-dislike system, etc) and we must normalize these values.
+	\end{itemize}
 	
 
 	\subsection{Information-chatbots}
