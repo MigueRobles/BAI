@@ -7,8 +7,8 @@
 \newcommand{\trtitle}{Machine Learning in Chatbots}
 \newcommand{\trmatrikelnummer}{7023522 | 7019703}
 \newcommand{\tremail}{migueurquiza@gmail.com | rafaroco96@gmail.com}
-\newcommand{\trarbeitsbereich}{Knowledge Technology, WTM}
-\newcommand{\trdate}{22-12-2017}
+\newcommand{\trarbeitsbereich}{Dept. Informatik -- Knowledge Technology, WTM}
+\newcommand{\trdate}{28-02-2018}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Languages:
@@ -170,7 +170,7 @@
 % Abstract gives a brief summary of the main points of a paper:
 \section*{Abstract}
 
-In this paper we are going to do a research on the automatic learning of the chatbots, focus in sentimental chatbots. First, we will study what is a chatbot, studying its origins and seeing its applications. Once this is done, we will see what are the different types of chatbots that exist today, seeing why we need them, how they work and their advantages and disadvantages.
+In this paper we are going to do a research on the automatic learning of the chatbots, focus in sentimental chatbots. First, we will study what is a chatbot, studying its origins and seeing its applications. Once this is done, we will see what are the different types of chatbots that exist today, seeing why we need them, how they work and their advantages and disadvantages.\\
 
 Once we have introduced the different types of chatbots that exist, we will establish similarities and differences in terms of structure, functionality and use between that chatbots. We will also make an research of the chatbots that because of their low usage and complex and not maintenance have become obsolete, an research of the chatbots that are used to a greater extent nowadays and an research of the chatbots that do not exist yet but we will need in our lives in a future.
 
@@ -201,8 +201,15 @@ A chatbot is a conversational bot whose objetive is to interract with the user, 
 
 A chatbot is programmed with its own information and recive together the necessary information, reformatting and presenting it in a way that meets the needs of the user. How do they respond accurately? Most chatbots solve this problem by using Case Based Reasoning(CBR). The CBR is able to use the previously experienced specific knowledge, that is, specific problematic situations (cases). Therefore, look for a similar previous case and its reused in the new problematic situation, adapting it to the appropriate conditions and getting to its solution. \cite{kolodner2014case}. There are also other ways to make a chatbot works, for example, using patterns. The program is programmed with response patterns that associate what the user enters with answers stored in a database. X being a variable, the program would identify it as a key phrase "I have X". One pattern could be to have the program respond to the user "I also have X". \\
 
-
- Usually, the artificial intelligence in a chatbots is built using concepts from Natural Language Interaction (NLI). NLI is the technology that allows computers and humans to communicate using natural language (the way we speak to other humans) instead of using a set of programming codes. The advantage of NLI processing is the additional ability to use the phrasing (verbs, nouns, adjectives, etc.) from the input to supply an answer that is more sensitive to the intent of the question. 
+ Usually, the artificial intelligence in a chatbots is built using concepts from Natural Language Interaction (NLI). NLI is the technology that allows computers and humans to communicate using natural language (the way we speak to other humans) instead of using a set of programming codes. The advantage of NLI processing is the additional ability to use the phrasing (verbs, nouns, adjectives, etc.) from the input to supply an answer that is more sensitive to the intent of the question.\\
+ 
+ Modern commercial chatbots, such as those developed with Lingubot$^{TM}$ \cite{lingubot2004creative} technology, offer sophisticated development environments allowing the building of intelligent conversational agents with complex, goal driven behaviour. In ‘Lingubots’ both the words and the grammatical structure of the user’s input are analysed using customised templates. This facilitates the development of a user model, which is used in conjunction with the conversational context and specific words in the dialogue to determine the chatbot’s response. Responses might include further conversation with the user, reading or writing to external systems (for instance to open a web page or update a database), or a combination of these. This rich range of responses allows for intelligent conversation with the user, and provides the ability to steer the user back to the task in hand if they stray from the designated discussion content for too long.  \\
+ 
+The biggest difficulty that resides in chatbots is in distinguishing when a phrase is context dependent or not. When it comes to independent sentences the bot should not look for the information in the sustained dialogue, they are common phrases when the answers to the questions are prepared. But when they are not dependent, the bot must be able to have previously understood the context of the conversation, to be able to respond appropriately.\\
+ 
+	 Originally, chatbots only responded to written text.In the last decade chatbots became more versatile and included speech synthesis and recognition,
+and affective state detection and responses.As computing technology and the underlying language processing software progresses, we can expect to see potentially exponential growth in the delivered complexity of chatbots. Already, they have come a long way from their roots in systems that were more about fun, flirtation or simple ‘chat’. So, we are going to go deep in the roots of chatbots\\
+ 
  
 
 
@@ -273,30 +280,87 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
 		
 \subsection{ALICE}
 	\label{sec:alice}
+	is
+the Artificial Linguistic Internet Computer Entity, first implemented by Wallace
+in 1995. 
 	
-	If we are talking about chatbots, we can not forget to talk about ALICE. As \cite{shawar2002comparison} says, ALICE (Artificial Linguistic Internet Computer Entity) is a robot that you can make chatting with it. ALICE knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). Let's see ALICE deeply:
+	If we are talking about chatbots, we can not forget to talk about ALICE. As \cite{shawar2002comparison} says, ALICE (Artificial Linguistic Internet Computer Entity), first implemented by Wallace in 1995,  is a robot that you can make chatting with it. ALICE knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). Let's see ALICE deeply:
 
 
 \subsubsection{AIML}
-	\begin{itemize}
-	
-	\item Categories\\
+
 	
 	As we can see in \cite{wallace2003elements}, the categories in AIML are the fundamental units of knowledge. A category is at least two more elements, but it can has optional elements. Basic elements are the patterns and templates, which are usually coded in that order (first pattern and second template) because patter would be the question and template would be the answer. The optional context portion of the constant category of variants, called \textless that\textgreater and \textless topic\textgreater. The \textless that\textgreater tag appears within the category, and its pattern must match the last statement of the robot. Remembering a last statement is important if the robot asks a question. The \textless topic\textgreater tag appears outside the category and brings together a group of categories. 
 	
-	\end{itemize}
+
 	
 \subsubsection{Preparation for Pattern Matching}
 	\label{sec:preparation}	
 	
-	Before starting pattern matching procedures each input to the AIML interpreter must pass through two processes:
-1- Normalization Process.
-2- Producing input path from each sentence.
-
+	Before starting pattern matching procedures each input to the AIML interpreter must pass through two processes:\\
+	
+	\begin{enumerate}
+		\item Normalization Process:
+		
+		In this step, we intend to retain most of the input information while we adapt that entry to be able to use it well. The recognition of punctuation marks is used mostly and the letters are capitalized. Here we have a table with some examples of this process step by step.
+		
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			 "I like that. :)" & "I like that. " & "I like that" & "I LIKE THAT" \\
+			\hline
+			\scriptsize{"I don't have. Do you have?"}  & \scriptsize{"I do not have. Do you have?"} & \scriptsize{"I do not have"} & \scriptsize{"I DO NOT HAVE"}\\  &  & \scriptsize{"Do you have?"} & \scriptsize{"DO YOU HAVE"}\\
+			\hline
+		\end{tabular}
+		
+		\item Producing input path from each sentence.
+		
+		This path has the following form:
+		
+		Input \textless That\textgreater Tvalue\textless Topic\textgreater Pvalue,  where:
+		
+			\begin{itemize}
+			
+			\item Input is the normalized input
+			\item \textless That\textgreater previous bot answer, normalized in the same way as input
+			\item Tvalue is the previous bot answer if exist and * if it doesn't exist.
+			\item \textless Topic\textgreater is an optional top level element that contains categories and has a name attribute assign to it, in order to allow interpreter to prefer responses.
+dealing with that topic.
+			\item Pvalue is the topic name if exists and * if it doesn't exist.
+			\end{itemize}
+	\end{enumerate}
+	
 \subsubsection{Pattern Matching Behaviour}
 	\label{sec:match}
+	
+		AIML interpreter try to match word by word in order to get the largest pattern matching, that is, the best one. It uses the Graphmaster. The Grapfmaster consists of a collection of nodes called Nodemappers. These Nodemappers map the branches from each node. The branches are either single words or wildcards. \\ 
+		
+\textbf{Algorithm : } 
+		
+		\begin{enumerate} 
+		\item Does the Nodemapper contain the key "\_" ?
 
+			\item If so, search the sub graph rooted at the child node linked by "\_".	
 
+		 		\item Try all remaining suffixes of the input following "X" to see if one matches. 
+	 			
+			\item If no match was found, try:
+
+				\item Does the Nodemapper contain the key "X"? 
+
+					\item If so, search the sub graph rooted at the child node linked by "X", using the tail of the input (the suffix of the input with "X" removed). 
+					\item If no match was found, try: 
+
+						\item Does the Nodemapper contain the key "*"? 
+						
+							\item If so, search the sub graph rooted at the child node linked by "*". 
+					\item Try all remaining suffixes of the input following "X" to see if one matches. 
+							\item If no match was found, go back up the graph to the parent of this node, and put "X" back on the head of the input. 
+							
+							\end{enumerate}
+
+						\textit {For completeness there should also be a terminal case: If the input is null (no more words) and the Nodemapper contains the <template> key, then a match was found. Halt the search and return the matching node.If the root Nodemapper contains a key "*" and it points to a leaf node, then the algorithm is guaranteed to find a match.}
+						
+						
 
 
 \section{Types of chatbots}
@@ -367,10 +431,10 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
 		
 		In order to do that, every word is converted into a vector, which is composed of two sub-vectors:
 		
-		\begin{itemize}
-			\item Word-level: It captures syntactic and semantic information,
+		\begin{enumerate}
+			\item Word-level: It captures syntactic and semantic information.
 			\item Character-level: It captures morphological and shape information.
-		\end{itemize}
+s\end{enumerate}
 	
 		Once we have the sentence converted into word-level and character-level embeddings, the next step they do in CharSCNN consists in extracting a sentence-level representation, but there are two main problems: sentences have different sizes and important information can appear at any position in the sentence. \\
 		
@@ -398,8 +462,10 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
 		
 	
 
-	\subsection{Information-chatbots}
+	\subsection{Academic-chatbots}
 	\label{sec:information}
+	
+	\cite{Lowgren614832}
 
 	\subsection{Game-chatbots}
 	\label{sec:game}
@@ -437,7 +503,6 @@ We have learned that
 % ``bib.bib''
 %
 \nocite{*}
-
 
 \newpage
 \bibliographystyle{alpha}
