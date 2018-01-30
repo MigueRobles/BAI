@@ -197,7 +197,8 @@ Once we have introduced the different types of chatbots that exist, we will esta
 \label{sec:introduction}
 
 Technology is changing the way we communicate. Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots}
-A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting}\\
+
+A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting} \\
 
 A chatbot is programmed with its own information and recive together the necessary information, reformatting and presenting it in a way that meets the needs of the user. How do they respond accurately? Most chatbots solve this problem by using Case Based Reasoning(CBR). The CBR is able to use the previously experienced specific knowledge, that is, specific problematic situations (cases). Therefore, look for a similar previous case and its reused in the new problematic situation, adapting it to the appropriate conditions and getting to its solution. \cite{kolodner2014case}. There are also other ways to make a chatbot works, for example, using patterns. The program is programmed with response patterns that associate what the user enters with answers stored in a database. X being a variable, the program would identify it as a key phrase "I have X". One pattern could be to have the program respond to the user "I also have X". \\
 
@@ -361,8 +362,19 @@ dealing with that topic.
 						\textit {For completeness there should also be a terminal case: If the input is null (no more words) and the Nodemapper contains the <template> key, then a match was found. Halt the search and return the matching node.If the root Nodemapper contains a key "*" and it points to a leaf node, then the algorithm is guaranteed to find a match.}
 						
 						
-
-
+\subsection{Other interestings Chatbots}
+	\label{sec:other}
+	
+	\begin{itemize}
+	
+	\item In \cite{vinyals2015neural} a sub symbolic chatbot is presented that uses machine learning. It appears that it can handle the general cases of conversation, even questions it didn’t train upon. The strength of the model is that it can be trained end-to-end and thus requires much fewer hand-crafted rules. The authors state that its answers are sometimes on the short side, and that slight variance in semantics can result in inconsistent answers. Another issue we have with such a methodology is that it’s a completely opaque process.
+	
+	\item  First launched on the internet by Rollo Carpenter in
+1997, Cleverbot is a web service that offers the possibility of interacting by chat message with artificial intelligence in real time. It is an intelligent social robot capable of talking about any topic, but its nature does not allow it to carry out processes such as: remembering long conversations or contextualizing; necessary for interaction and conversation.\cite{molinero2013absurdo}
+	
+	In \cite{molinero2013absurdo} we can read that since 1991, computer programs capable of simulating a human conversation have been awarded with the Loebner prizes. These, are granted those programs that manage to hire an examiner, who is isolated from everything, and who is in front of a computer; which through written text, dialog with him. This test is known as Turing Test \cite{naor1996verification}, and it is the origin of many web services, programs and applications that can be offered to the public, stories such as search assistants, anti spam systems or human understanding interfaces. Of the services of chatbot, or conversational robot of public access existing at present, Cleverbot -www.cleverbot.com- one of the best known and most "human" that exist in the market. And one of the few that has managed to pass the Turing Test with a score higher than 50 \%. This implies that in front of its human counterpart, more than half of examiners mistakenly determined that a person hidden behind a computer was the chatbot, and that the robot was a person.	
+	\end{itemize}
+ 
 \section{Types of chatbots}
 	\label{sec:types}
 	
@@ -465,30 +477,40 @@ s\end{enumerate}
 	\subsection{Academic-chatbots}
 	\label{sec:information}
 	
-	\cite{Lowgren614832}
-
 	\subsection{Game-chatbots}
 	\label{sec:game}
 
 	\subsection{Assistant-chatbots}
 	\label{sec:assistant}
 	
+	Now we are going to reseach about Assistant chatbots. As we can read in \cite{imrie2013virtual}, a chatbot with natural language algorithms and localised data could be used as a virtual personal assistant. However, this will require the program to be able to create metadata by forming links between data in given by the user and provide contextual outputs during the interaction that the user finds intersenting and useful. The difference between the way that each chatbot examines the personal data allow us to categorize the apparently similar programs dependind on where the data remains:
+	\begin{itemize}
+\item \textit{Information service providers: }
+They are systems that carry out requets but also provide support for the organisation behind the system. These programs don’t have a localised library for their natural language processing. That means the program is not focusing on each individual user, although the data generated by the analysis of the user activity is saved and controled by the Company. An example of this type og chatbot is Siri from Apple.
 
-\section{Comparison of chatbots}
+\item \textit{Content providers.}
+They are systems that provides the information to be used by other systems.  They explore data form existing databases and create its own metadata. They interact with content providers and become into a large data libraries.  
+
+\item \textit{Mediation service:}
+They are systems that function as a intermediate between the user and other services. Mediation service could be really useful because it acts as a direct connection between the services and posible multiple users. 
+
+\item \textit{Third party service: }
+Contains services that can be applied to a system for its own improvement. This system doesn´t provide services for the users, it gives support for the systems that the user is using.  When this system belong to the user, the third party system can’t interact. Finally, the system could act as an intermediary for the support systems. 
+
+\item \textit{User owned services: }
+They work for the user personally, allowing private information keep between the user and the system. The support system does not only have local data and libraries, it also develops metadata and contextual data as a result of use analysis and history of interaction with user. All of contextually developed content in the data library is owned and under the control of the end user.
+	
+\end{itemize}
+
+\section{Comparison between chatbots and humans}
 \label{sec:comparison}
 
+In \cite{HILL2015245}
 
-\section{Chatbots in time}
-\label{sec:time}
-
-\subsection{Obsolets}
-\label{sec:obsolet}
-
-\subsection{Nowdays}
-\label{sec:nowdays}
-
-\subsection{Future}
-\label{sec:future}
+\section{Loebner prizes}
+	\label{sec:loebner}
+	
+	In \cite{loebner2011} it is said that "The Loebner Prize, named after its founder and philanthropist Hugh Loebner, is an annual world-wide contest to test the state-of-the-art in artificial intelligence (AI)."
 
 \section{Conclusion}
 \label{sec:conclusion}
