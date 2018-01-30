@@ -196,12 +196,10 @@ Once we have introduced the different types of chatbots that exist, we will esta
 \section{Introduction}
 \label{sec:introduction}
 
-Technology is changing the way we communicate. Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots} Chatbots (also known as conversational agents, artificial conversation entities, or
-chatterboxes) are computer applications that imitate human personality. A chatbot is interactive, asking questions, responding in sentences that track the conversation in a way that is meaningful to humans or even initiating new topics of conversation. \cite{huang2007extracting}
+Tec Chnology is (also knowns schanging the way we communicate. Let's start by defining what chatbots are.\textit{"Chatbots are computer programs that interact with users using natural languages."} \cite{shawar2007chatbots}
+A chatbot is a conversational bot whose objetive is to interract with the user, asking question, giving answers or even initiating new topics of conversation. \cite{huang2007extracting}
 
-A chatbot is programmed with its own information and recive together the necessary information, reformatting and presenting it in a way that meets the needs of the user. How do they respond accurately? Most chatbots solve this problem by using Case Based Reasoning(CBR). The CBR is able to use the previously experienced specific knowledge, that is, specific problematic situations (cases). Therefore, look for a similar previous case and its reused in the new problematic situation, adapting it to the appropriate conditions and getting to its solution. \cite{kolodner2014case}. There are also other ways to make a chatbot works, for example, using patterns. The program is programmed with response patterns that associate what the user enters with answers stored in a database. X being a variable, the program would identify it as a key phrase "I have X". One pattern could be to have the program respond to the user "What a coincidence! My father also has X". 
- 
- 
+
 
 \section{A review of chatbots}
 \label{sec:basics}
@@ -235,8 +233,8 @@ The second function that appears is called analyze. We look for if any word in t
 \includegraphics[scale=0.6]{./Pictures/main.png}
 \caption{Main}
 \label{fig:main}
-\end{figure}
 
+\end{figure}
 Finally, we have the main function that runs the program. First, we show the initial sentence on the screen, to begin the conversation with the user. From there and until the user does not want to stop, we continue having a conversation with him and analyzing his answers with the function presented in figure \ref{fig:analyze}.\\
 
 Here is an example of a the output of the program:
@@ -264,19 +262,29 @@ We see that the program designed by Mr. Joseph Weizenbaum was nothing more than 
 	
 	But before we start talking about sentimental chatbots, let's talk about sentiment analysis.
 	
-	\subsubsection{Sentiment analysis}
-	\label{sec::sentiment_analysis}
+		\subsubsection{Sentiment analysis}
+		\label{sec::sentiment_analysis}
+		
+		As B. Pang and L. Lee say, there are several problems in the sentiment analysis \cite{sentiment_analysis_bpang_llee}:
+		
+		\begin{itemize}
+			\item First of all, we have to determine which documents or webpages have relevant information for sentiment analysis, that's opinions, reviews, etc.
+			\item Then it comes the problem of which portions of the documents or the information we are analyzing are useful for the sentiment analysis.
+			\item After this we have to determine whether the opinion or information expresses a positive or negative feeling, or directly with what feeling it corresponds. In some pages like 
+					Amazon it can be easier since in the comments section, each comment is associated with a product evaluation that usually reflects the user's agreement and therefore the degree of positivity of the comment, but in other occasions in which we have no clue can be complicated.
+			\item Finally we must internally represent in our chatbot or sentiment analysis program that feeling, since not in all the web pages or documents in which we are given a previous
+				 	valuation the same measurement system is used (Amazon uses a 5 stars system, Yahoo answers uses a like-dislike system, etc) and we must normalize these values.
+		\end{itemize}
 	
-	As B. Pang and L. Lee say, there are several problems in the sentiment analysis \cite{sentiment_analysis_bpang_llee}:
-	
-	\begin{itemize}
-		\item First of all, we have to determine which documents or webpages have relevant information for sentiment analysis, that's opinions, reviews, etc.
-		\item Then it comes the problem of which portions of the documents or the information we are analyzing are useful for the sentiment analysis.
-		\item After this we have to determine whether the opinion or information expresses a positive or negative feeling, or directly with what feeling it corresponds. In some pages like 
-				Amazon it can be easier since in the comments section, each comment is associated with a product evaluation that usually reflects the user's agreement and therefore the degree of positivity of the comment, but in other occasions in which we have no clue can be complicated.
-		\item Finally we must internally represent in our chatbot or sentiment analysis program that feeling, since not in all the web pages or documents in which we are given a previous
-			 	valuation the same measurement system is used (Amazon uses a 5 stars system, Yahoo answers uses a like-dislike system, etc) and we must normalize these values.
-	\end{itemize}
+		There are many tools that allow us or help us to analyze sentiment easily, such as "Tweet sentiment application" \footnote{https://www.csc2.ncsu.edu/faculty/healey/tweet\_viz/tweet\_app/} developed by Dr. Christopher Healey that allows you to search for tweets based on keywords and shows us information about tweets containing those keywords that can be very useful such as Sentiment, Topics, Heatmap, Tag Cloud, Timeline, Map, Affinity, Narrative and tweets. \\
+		
+		The most useful for us is the Sentiment information that show us a graphic representation of the sentiments shown in the tweets: \textit{"Sentiment. Each tweet is shown as a circle positioned by sentiment, an estimate of the emotion contained in the tweet's text. Unpleasant tweets are drawn as blue circles on the left, and pleasant tweets as green circles on the right. Sedate tweets are drawn as darker circles on the bottom, and active tweets as brighter circles on the top. Hover your mouse over a tweet or click on it to see its text"} \cite{tweet_sentiment_analysis}.
+			
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.6]{./Pictures/fireworks_sentiment_visualization.png}
+			\caption{As we can see, most of the tweets associated to the keyword "fireworks" are positive. This can be usefull when parsing some texts containing some words we don't know how to proccess.} 
+		\end{figure}
 	
 
 	\subsection{Information-chatbots}
