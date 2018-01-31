@@ -170,9 +170,9 @@
 % Abstract gives a brief summary of the main points of a paper:
 \section*{Abstract}
 
-In this paper we are going to do a research on the automatic learning of the chatbots, focus in sentimental chatbots. First, we will study what is a chatbot, studying its origins(ELIZA) and seeing  Once this is done, we will see what are the different types of chatbots that exist today, seeing why we need them, how they work and their advantages and disadvantages.\\
+In this paper we are going to do a research on the automatic learning of the chatbots, focus in sentimental chatbots. First, we will study what is a chatbot, studying its origins (E.L.I.Z.A) and seeing anohter famous bots as A.L.I.C.E. and Cleverbot. Once this is done, we will see what are the different types of chatbots that exist today, seeing why we need them, analyzing their behavior with the feelings, analyzing a tool that allows us to know the polarity of the messages of the Twitter network, one of the most famous social networks used in this decade. We will also study how using tools such as Pattern, a sentimental library made in Python, we can build our own program that detects the positivity or negativity of a given message.\\
 
-Once we have introduced the different types of chatbots that exist, we will establish similarities and differences in terms of structure, functionality and use between that chatbots. We will also make an research of the chatbots that because of their low usage and complex and not maintenance have become obsolete, an research of the chatbots that are used to a greater extent nowadays and an research of the chatbots that do not exist yet but we will need in our lives in a future.
+Once we have introduced the different types of chatbots that exist, 
 
 
 \begin{comment}
@@ -218,13 +218,13 @@ and affective state detection and responses.As computing technology and the unde
 \label{sec:basics}
 Before we get to how sentimental analysis works in sentimental chatbots, we need to talk about the origins of chatbts. Let's see the first of all, created in the decade of the 60s, E.L.I.Z.A. and we will also see in depth the chatbot A.L.I.C.E. created years later in the decade of the 90s. We are going to see what they did and how they worked
 
-\subsection{ELIZA}
-	\label{sec:eliza}
-The need to create virtual machines that speak as if they were human beings born in the decade of the 60s. ELIZA was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", ELIZA can respond "Tell me more about your family" \cite{shawar2007chatbots}.\\
+\subsection{E.L.I.Z.A}
+	\label{sec:E.L.I.Z.A}
+The need to create virtual machines that speak as if they were human beings born in the decade of the 60s. E.L.I.Z.A was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", E.L.I.Z.A can respond "Tell me more about your family" \cite{shawar2007chatbots}.\\
 
-Eliza is basically composed of a dictionary of pronouns, a list of matches and 3 functions.\cite{joseph1966eliza} The dictionary of pronouns is basically responsible for entering the correct pronouns in the answers given by the machine, that is, if the user enters "my father" as input, the machine returns a response in which it says "your father. The list of matches is responsible for linking keywords that the user enters with possible answers related to that keyword. For example, if the user enters the word "child", the machine will probably respond: "Did you have close friends as a child?" or "Did the other children sometimes tease you?"."\cite{joseph1966eliza}\\
+E.L.I.Z.A is basically composed of a dictionary of pronouns, a list of matches and 3 functions.\cite{joseph1966E.L.I.Z.A} The dictionary of pronouns is basically responsible for entering the correct pronouns in the answers given by the machine, that is, if the user enters "my father" as input, the machine returns a response in which it says "your father. The list of matches is responsible for linking keywords that the user enters with possible answers related to that keyword. For example, if the user enters the word "child", the machine will probably respond: "Did you have close friends as a child?" or "Did the other children sometimes tease you?"."\cite{joseph1966E.L.I.Z.A}\\
 
-Now we are going to see how the functions work. We have implemented in Python, with the help of \cite{small2017}, the ELIZA chatbot, in order to understand more easily how the first chatbot of all times worked. Let's do the analisys with the help of some images with the program code.\\
+Now we are going to see how the functions work. We have implemented in Python, with the help of \cite{small2017}, the E.L.I.Z.A chatbot, in order to understand more easily how the first chatbot of all times worked. Let's do the analisys with the help of some images with the program code.\\
 
 \subsubsection{Functions}
 	\label{sec:functions}
@@ -267,7 +267,7 @@ Finally, we have the main function that runs the program. First, we show the ini
 
 \item{Example}
 	
-Here is an example of a the output of the program. We can see exactly what we are referring to in section X. We have given ELIZA an entry with the word "child", and it has given us using pattern matching, a response that fits into the conversation. Then we have given ELIZA a phrase with words that it does not have in its database and what it has done has been to return a random phrase from the list to continue obtaining information.
+Here is an example of a the output of the program. We can see exactly what we are referring to in section X. We have given E.L.I.Z.A an entry with the word "child", and it has given us using pattern matching, a response that fits into the conversation. Then we have given E.L.I.Z.A a phrase with words that it does not have in its database and what it has done has been to return a random phrase from the list to continue obtaining information.
 
 \begin{figure}[h]
 \centering
@@ -279,13 +279,13 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
  
 \end{itemize}
 		
-\subsection{ALICE}
-	\label{sec:alice}
+\subsection{A.L.I.C.E.}
+	\label{sec:A.L.I.C.E.}
 	is
 the Artificial Linguistic Internet Computer Entity, first implemented by Wallace
 in 1995. 
 	
-	If we are talking about chatbots, we can not forget to talk about ALICE. As \cite{shawar2002comparison} says, ALICE (Artificial Linguistic Internet Computer Entity), first implemented by Wallace in 1995,  is a robot that you can make chatting with it. ALICE knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). Let's see ALICE deeply:
+	If we are talking about chatbots, we can not forget to talk about A.L.I.C.E.. As \cite{shawar2002comparison} says, A.L.I.C.E. (Artificial Linguistic Internet Computer Entity), first implemented by Wallace in 1995,  is a robot that you can make chatting with it. A.L.I.C.E. knowledge is stored in AIML files. AIML is an abbreviation of The Artificial Intelligent Mark up Language that is a derivative of Extensible Mark up Language(XML). Let's see A.L.I.C.E. deeply:
 
 
 \subsubsection{AIML}
