@@ -172,7 +172,7 @@
 
 In this paper we are going to do a research on the automatic learning of the chatbots, focus in sentimental chatbots. First, we will study what is a chatbot, studying its origins (E.L.I.Z.A) and seeing anohter famous bots as A.L.I.C.E. and Cleverbot. Once this is done, we will see what are the different types of chatbots that exist today, seeing why we need them, analyzing their behavior with the feelings, analyzing a tool that allows us to know the polarity of the messages of the Twitter social network, one of the most famous social networks used in this decade. We will also study how using tools such as Pattern, a sentimental library made in Python, we can build our own program that detects the positivity or negativity of a given message.\\
 
-Once we have introduced the different types of chatbots that exist, we will analyze how similar is the language that a robot can get to know with the language of a human person. We will see how the Turing Test are able to rank the different existing chatbots, thus giving rise to the Loebner Awards, an annual competition that rewards the robot that can make a human being believe that it is not.
+Once we have introduced the different types of chatbots that exist, we will analyze how similar is the language that a robot can get to know with the language of a human person. We will see how the Turing Test are able to rank the different existing chatbots, thus giving rise to the Loebner Prizes, an annual competition that rewards the robot that can make a human being believe that it is not.
 
 \begin{comment}
 
@@ -205,6 +205,8 @@ A chatbot is programmed with its own information and recive together the necessa
  
  Modern commercial chatbots, such as those developed with Lingubot$^{TM}$ \cite{lingubot2004creative} technology, offer sophisticated development environments allowing the building of intelligent conversational agents with complex, goal driven behaviour. In ‘Lingubots’ both the words and the grammatical structure of the user’s input are analysed using customised templates. This facilitates the development of a user model, which is used in conjunction with the conversational context and specific words in the dialogue to determine the chatbot’s response. Responses might include further conversation with the user, reading or writing to external systems (for instance to open a web page or update a database), or a combination of these. This rich range of responses allows for intelligent conversation with the user, and provides the ability to steer the user back to the task in hand if they stray from the designated discussion content for too long.  \\
  
+ \newpage
+ 
 The biggest difficulty that resides in chatbots is in distinguishing when a phrase is context dependent or not. When it comes to independent sentences the bot should not look for the information in the sustained dialogue, they are common phrases when the answers to the questions are prepared. But when they are not dependent, the bot must be able to have previously understood the context of the conversation, to be able to respond appropriately.\\
  
 	 Originally, chatbots only responded to written text. In the last decade chatbots became more versatile and included speech synthesis and recognition,
@@ -223,6 +225,8 @@ Before we get to how sentimental analysis works in sentimental chatbots, we need
 \subsection{E.L.I.Z.A}
 	\label{sec:E.L.I.Z.A}
 The need to create virtual machines that speak as if they were human beings born in the decade of the 60s. E.L.I.Z.A was born, by the hand of Joseph Weizenbaum, professor emeritus of Informatics at the Massachusetts Institute of Technology. At that time, this chatbot was created to emulate a psychotherapist in clinical treatment.The objective of this teacher when he created the program was simple and made use of keyword matching. A keyword is searched in the input, and if this keyword is in the database, a previously programmed response is answered, and if this does not happen, the program returns a random phrase to continue obtaining information. For example, if the input includes the keyword "mother", E.L.I.Z.A can respond "Tell me more about your family" \cite{shawar2007chatbots}.\\
+
+\newpage
 
 E.L.I.Z.A is basically composed of a dictionary of pronouns, a list of matches and 3 functions.\cite{joseph1966E.L.I.Z.A} The dictionary of pronouns is basically responsible for entering the correct pronouns in the answers given by the machine, that is, if the user enters "my father" as input, the machine returns a response in which it says "your father. The list of matches is responsible for linking keywords that the user enters with possible answers related to that keyword. For example, if the user enters the word "child", the machine will probably respond: "Did you have close friends as a child?" or "Did the other children sometimes tease you?"."\cite{joseph1966E.L.I.Z.A}\\
 
@@ -281,6 +285,8 @@ We see that the program designed by Mr. Joseph Weizenbaum was a very simple prog
  
 \end{itemize}
 		
+\newpage		
+		
 \subsection{A.L.I.C.E.}
 	\label{sec:A.L.I.C.E.}
 	is
@@ -305,7 +311,7 @@ in 1995.
 	\begin{enumerate}
 		\item Normalization Process:
 		
-		In this step, we intend to retain most of the input information while we adapt that entry to be able to use it well. The recognition of punctuation marks is used mostly and the letters are capitalized. Here we have a table with some examples of this process step by step.
+		In this step, we intend to retain most of the input information while we adapt that entry to be able to use it well. The recognition of punctuation marks is used mostly and the letters are capitalized. Here we have a table with some examples of this process step by step.\\
 		
 		\begin{tabular}{|c|c|c|c|}
 			\hline
@@ -314,6 +320,8 @@ in 1995.
 			\scriptsize{"I don't have. Do you have?"}  & \scriptsize{"I do not have. Do you have?"} & \scriptsize{"I do not have"} & \scriptsize{"I DO NOT HAVE"}\\  &  & \scriptsize{"Do you have?"} & \scriptsize{"DO YOU HAVE"}\\
 			\hline
 		\end{tabular}
+		
+\newpage		
 		
 		\item Producing input path from each sentence.
 		
